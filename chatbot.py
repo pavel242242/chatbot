@@ -31,6 +31,8 @@ ai_api_key = st.text_input(label="OpenAI API Key")
 
 if ai_api_key is not None:
     os.environ['OPENAI_API_KEY'] = ai_api_key
+    load_dotenv()
+    print(os.getenv("OPENAI_API_KEY"))
     if csv_file is not None:
         with open(csv_file.name, "wb") as f:
             f.write(csv_file.getbuffer())
