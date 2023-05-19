@@ -20,7 +20,6 @@ load_dotenv()
 if os.getenv("OPENAI_API_KEY") is None or os.getenv(
         "OPENAI_API_KEY") == "":
     print("OPENAI_API_KEY is not set")
-    exit(1)
 else:
     print("OPENAI_API_KEY is set")
 
