@@ -10,9 +10,6 @@ import duckdb
 import os
 import streamlit as st
 
-SMART_TOKEN_LIMIT = 4000
-
-
 
 load_dotenv()
 
@@ -65,7 +62,7 @@ if ai_api_key is not None:
             with st.spinner(text="In progress..."):
                 st.write(
                     agent.run(
-                        "There is only one table in the database named csv. Try to answer all questions using this table. "
+                        "There is only one table in the database named csv. Try to answer all questions using this table. Be careful with column names, some may contain IDs, some just texts."
                         + user_question))
 
 
